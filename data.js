@@ -1,13 +1,12 @@
+const items = {
 
-const items = {  
-      
       scarf: [
         {'fabric': 'silk satin twill',
          'img'   : 'http://g01.a.alicdn.com/kf/HTB1KmJAIXXXXXaVXVXXq6xXFXXXL/50-OFF-Sale-for-defect-Pure-silk-blends-cotton-fabric-silk-satin-twill-shimmering-sew-for.jpg',
          'weight': ['12mm','14mm'],},
 
         {'fabric': 'silk charmeuse',
-         'img'   : 'http://sewaholic.net/wp-content/uploads/2014/05/fabric-1.jpg', 
+         'img'   : 'http://sewaholic.net/wp-content/uploads/2014/05/fabric-1.jpg',
          'weight': ['12.5mm','19mm']}],
       size: [
         { 'size':'12 x 12','cost': 12},
@@ -39,7 +38,7 @@ const items = {
          'img'   : 'http://g01.a.alicdn.com/kf/HTB1KmJAIXXXXXaVXVXXq6xXFXXXL/50-OFF-Sale-for-defect-Pure-silk-blends-cotton-fabric-silk-satin-twill-shimmering-sew-for.jpg',
          'weight': ['12mm','14mm'],
          'width' : ['36"' ,'44"'],},
-        
+
         {'fabric': 'silk charmeuse',
          'img'   : 'http://sewaholic.net/wp-content/uploads/2014/05/fabric-1.jpg',
          'weight': ['12.5mm','19mm'],
@@ -65,7 +64,7 @@ const items = {
       portfolio: [
 
        {
-         'title' : 'Erika Ceruzzi', 
+         'title' : 'Erika Ceruzzi',
          'img'   : 'http://res.cloudinary.com/software-studios/image/upload/v1458841575/Portfolio/Erika_Ceruzzi_-ribboncloseup_web.jpg',
          'sub_1' : 'Ribbons',
          'sub_2' : 'Printed on Bamboo Twill',
@@ -75,7 +74,7 @@ const items = {
         },
 
        {
-         'title' : 'Glossier', 
+         'title' : 'Glossier',
          'img'   : 'http://res.cloudinary.com/software-studios/image/upload/v1459535716/glossier_phase2_large_we8fvs.jpg',
          'sub_1' : 'Printed on SemiMatte Photo Paper',
          'sub_2' : '',
@@ -85,7 +84,7 @@ const items = {
         },
 
         {
-         'title' : 'Katherine Sullivan  Margaux Wheelock-Shew', 
+         'title' : 'Katherine Sullivan  Margaux Wheelock-Shew',
          'img'   : 'http://res.cloudinary.com/software-studios/image/upload/v1458867053/landscapes_migyv4.jpg',
          'sub_1' : 'Landscapes of Erosion',
          'sub_2' : 'Printed on Silk Charmeuse',
@@ -96,7 +95,4 @@ const items = {
 
       ]
     }
-
-
-
-    export default items
+    export default items;
