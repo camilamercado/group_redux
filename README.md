@@ -15,13 +15,13 @@ open localhost:8080
 ```
 
 ## DOCS
-- [x] [SDK DOCS](http://shopify.github.io/js-buy-sdk/)
-- [x] [Github](https://github.com/Shopify/js-buy-sdk)
-- [x] [npm](https://www.npmjs.com/package/shopify-buy)
-- [x] [Example Cart Functions](https://github.com/Shopify/js-buy-sdk/blob/master/examples/cart/index.js)
+- [SDK DOCS](http://shopify.github.io/js-buy-sdk/)
+- [Github](https://github.com/Shopify/js-buy-sdk)
+- [npm](https://www.npmjs.com/package/shopify-buy)
+- [Example Cart Functions](https://github.com/Shopify/js-buy-sdk/blob/master/examples/cart/index.js)
 
 ## In The Wild
 
-- [x][All Knit Wear](http://allknitwear.com/)
-- [x][KYLE](http://www.kylekylekyle.net/)
+- [All Knit Wear](http://allknitwear.com/)
+- [KYLE](http://www.kylekylekyle.net/)
 
