@@ -3,13 +3,18 @@ import {render} from 'react-dom'
 import {Provider} from 'react-redux'
 import {createStore} from 'redux'
 import reducer from './reducers'
+import configureStore from './store/configureStore'
 import items from 'data'
 import App from 'App'
 
-let store = createStore(reducer)
+const initialState = window.__INITIAL_STATE__
+const store = configureStore(initialState)
+
+//let store = createStore(reducer)
 const app = (
   <Provider store={store}>
     <App/>
   </Provider>
 );
 render(app, document.getElementById('app'));
+

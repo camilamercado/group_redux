@@ -1,15 +1,10 @@
-import * as c from 'constants'
-const portfolioItems = (state = [], action) => {
-  switch (action.type) {
-    case c.ADD_PORTFOLIO_ITEM:
-      return [
-        ...state,
-        action.portfolioItem
-      ]
+import {combineReducers} from 'redux'
+import shopify from './shopify'
+import portfolioItems from './portfolioItems'
 
-    default:
-      return state
-  }
-}
 
-export default portfolioItems
+
+export default combineReducers({
+  portfolioItems,
+  shopify
+})
