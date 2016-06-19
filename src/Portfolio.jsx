@@ -4,7 +4,6 @@ import PortfolioItem from 'PortfolioItem'
 export default class Portfolio extends Component {
   render() {
 
-	console.log(this.props.portfolio.portfolioItems)
 	let portfolioItems = this.props.portfolio.portfolioItems
 
     return (

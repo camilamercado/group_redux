@@ -6,11 +6,9 @@ import reducer from './reducers'
 import configureStore from './store/configureStore'
 import items from 'data'
 import App from 'App'
-
 const initialState = window.__INITIAL_STATE__
 const store = configureStore(initialState)
 
-//let store = createStore(reducer)
 const app = (
   <Provider store={store}>
     <App/>

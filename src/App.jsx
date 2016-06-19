@@ -5,8 +5,17 @@ import * as c from 'constants'
 import Portfolio from 'Portfolio'
 import * as shopifyActions from 'actions/shopifyActions'
 import * as portfolioActions from 'actions/portfolioActions'
-
 import {bindActionCreators} from 'redux'
+import ShopifyBuy from 'shopify-buy'
+
+let collectionID = 305808326
+
+let shopClient = ShopifyBuy.buildClient({
+  apiKey: '1bbcdc4227365db72405d2029139c4c6',
+  myShopifyDomain: 'shop-redux',
+  appId: '6'
+});
+
 
 
 class App extends Component {
@@ -16,6 +25,8 @@ class App extends Component {
      data.portfolio.forEach(item =>
      this.props.portfolioActions.initPortfolio(item)
     )
+
+     this.props.shopifyActions.initShopClient(shopClient)
 
   }
 
