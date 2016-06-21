@@ -26,7 +26,7 @@ module.exports ={
 
   resolve: {
     root: [path.join(__dirname, 'src'), __dirname],
-    extensions: ["", ".webpack.js", ".web.js", ".js", '.jsx']
+    extensions: ["", ".webpack.js", ".web.js", ".js", '.jsx', '.es6']
   },
 
   devServer: {

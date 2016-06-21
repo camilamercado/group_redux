@@ -3,8 +3,8 @@ import PortfolioItem from 'PortfolioItem'
 
 export default class Portfolio extends Component {
   render() {
-
-	let portfolioItems = this.props.portfolio.portfolioItems
+    console.log(this.props)
+	let portfolioItems = this.props.portfolio
 
     return (
       <div>

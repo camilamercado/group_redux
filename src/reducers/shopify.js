@@ -2,18 +2,30 @@
 
 export default function shopify ( 
   state = {
-            shop:[{},{},{}],
+            shopItems:[{},{},{}],
             cart: false,
-            checkoutURL : false,     
+            checkoutURL : false, 
           }, action) {
 
   switch (action.type) {
 
       case 'RECEIVE_SHOP':
       //console.log("receiving", action)
-      return  { 
-        shop: action.shop,
+      return { 
+        shopItems: action.shopItems
       }
+
+      // case 'RECEIVE_SHOPBYID':
+
+      // return {
+      //   ...state, 
+      //   shopByID: action.shop.reduce((retVal, curr) => 
+      //   {
+      //     retVal[curr.id] = curr
+      //     return retVal
+
+      //   }, {})
+      // }
 
       default:
       return state
