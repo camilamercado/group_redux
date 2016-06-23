@@ -16,3 +16,9 @@ function receiveCart(cart) {
 	console.log("receiving cart!")
     return { 'type': 'RECEIVE_CART', 'cart': cart}
 }
+
+
+export function changeName() {
+	console.log("receiving name!")
+    return { 'type': 'CHANGE_NAME'}
+}

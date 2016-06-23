@@ -4,7 +4,7 @@ export default function shopify (
   state = {
             shopItems:[],
             shopByID:{},
-            active: null
+            selectedItem: {}
             
           }, action) {
 
@@ -28,6 +28,17 @@ export default function shopify (
 
         }, {})
       
+    }
+
+    case 'CHANGE_NAME':
+    let keyVal = Object.keys(state.shopByID)[0]
+    let currVal = state.shopByID[keyVal]
+    let newVal = {...currVal, title: "NUNUMEW2"}
+    let newShopByID = {...state.shopByID, [keyVal]: newVal }
+    
+    return {
+      ...state,
+      shopByID: newShopByID
     }
 
       default:

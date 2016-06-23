@@ -1,6 +1,7 @@
 export default function cart ( 
   state = {
-            cart: []    
+            cart: [],
+            mockCart: []    
           }, action) {
 
   switch (action.type) {
@@ -8,7 +9,15 @@ export default function cart (
       case 'RECEIVE_CART':
       console.log("receiving", action)
       return { 
+        ...state,
         cart: action.cart
+      }
+
+      case 'SELECT_ITEM':
+
+      return {
+        ...state,
+        mockCart: state.mockCart.concat(action.item)
       }
 
       default:

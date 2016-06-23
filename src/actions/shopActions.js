@@ -25,3 +25,10 @@ function receiveShop(e, dispatch) {
     return dispatch({ 'type': 'RECEIVE_SHOP', 'shopItems': e})
   
 }
+
+export function selectItem(item) {
+
+    console.log("selecting action >>",item)
+    return { 'type': 'SELECT_ITEM', 'item': item}
+  
+}

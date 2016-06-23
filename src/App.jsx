@@ -60,7 +60,10 @@ class App extends Component {
       console.log("portfolio")
       return <Portfolio portfolio={this.props.portfolio}/>
     }if (this.props.app.link === "shop"){
-      return <Shop shop={this.props.shop}/>
+      return <Shop shop={this.props.shop}
+                   cart={this.props.cart}
+                   cart2Render={this.props.cart2Render}
+                   shopActions={this.props.shopActions}/>
       console.log("portfolio")
     }
   }
@@ -71,6 +74,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <div className="Actor" onClick={this.props.cartActions.changeName}>CHANGE NAME</div>
         <div Classname="link" id="A" style={linkStyle} onClick={() => this.newLink("portfolio")}>PORTFOLIO</div>
         <div Classname="link" id="B" style={linkStyle} onClick={() => this.newLink("shop")}>SHOP</div>
 
@@ -88,11 +92,13 @@ const mapStateToProps = (state) => {
   return {
           'app': state.app,
           'shop': state.shop,
-          'shopByID': state.shopByID,
           'cart': state.cart,
-          'portfolio': state.portfolioItems
+          'portfolio': state.portfolioItems,
+          'cart2Render': state.cart.mockCart.map(id => state.shop.shopByID[id])
          }
 }
+
+
 
 const mapDispatchToProps = (dispatch) => {
   return {
