@@ -17,7 +17,7 @@ export default class Shop extends Component {
 
 
   render() {
-    console.log(this.props)
+    console.log("shop props", this.props)
     let shopItems = this.props.shop.shopItems
     let cardStyle = this.cardStyler()
     

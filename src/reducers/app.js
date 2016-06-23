@@ -1,6 +1,6 @@
 //import * as types from '../constants/ActionTypes'
 
-export default function shopify ( 
+export default function app ( 
   state = {
             link: null    
           }, action) {
@@ -14,7 +14,7 @@ export default function shopify (
         link: action.link,
        
       }
-      
+
       default:
       return state
 

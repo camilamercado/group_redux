@@ -5,7 +5,8 @@ import * as c from 'constants'
 import Portfolio from 'Portfolio'
 import Shop from 'Shop'
 import * as appActions from 'actions/appActions'
-import * as shopifyActions from 'actions/shopifyActions'
+import * as shopActions from 'actions/shopActions'
+import * as cartActions from 'actions/cartActions'
 import * as portfolioActions from 'actions/portfolioActions'
 import {bindActionCreators} from 'redux'
 import ShopifyBuy from 'shopify-buy'
@@ -30,7 +31,8 @@ class App extends Component {
      this.props.portfolioActions.initPortfolio(item)
     )
 
-     this.props.shopifyActions.initShopClient(shopClient)
+     this.props.shopActions.initShopClient(shopClient)
+     this.props.cartActions.initCart(shopClient)
 
   }
 
@@ -58,7 +60,7 @@ class App extends Component {
       console.log("portfolio")
       return <Portfolio portfolio={this.props.portfolio}/>
     }if (this.props.app.link === "shop"){
-      return <Shop shop={this.props.shopify}/>
+      return <Shop shop={this.props.shop}/>
       console.log("portfolio")
     }
   }
@@ -85,7 +87,9 @@ class App extends Component {
 const mapStateToProps = (state) => {
   return {
           'app': state.app,
-          'shopify': state.shopify,
+          'shop': state.shop,
+          'shopByID': state.shopByID,
+          'cart': state.cart,
           'portfolio': state.portfolioItems
          }
 }
@@ -93,7 +97,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
           'appActions': bindActionCreators(appActions, dispatch),
-          'shopifyActions': bindActionCreators(shopifyActions, dispatch),
+          'shopActions': bindActionCreators(shopActions, dispatch),
+          'cartActions': bindActionCreators(cartActions, dispatch),
           'portfolioActions': bindActionCreators(portfolioActions, dispatch)
         }
 }

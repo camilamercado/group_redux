@@ -1,10 +1,12 @@
 import {combineReducers} from 'redux'
 import app from './app'
-import shopify from './shopify'
+import shop from './shop'
+import cart from './cart'
 import portfolioItems from './portfolioItems'
 
 export default combineReducers({
   app,
   portfolioItems,
-  shopify
+  shop,
+  cart
 })
