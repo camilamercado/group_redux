@@ -6,6 +6,7 @@ import reducer from './reducers'
 import configureStore from './store/configureStore'
 import items from 'data'
 import App from 'App'
+import Styles from './Styles/Main.css'
 const initialState = window.__INITIAL_STATE__
 const store = configureStore(initialState)
 

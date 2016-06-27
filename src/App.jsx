@@ -74,9 +74,9 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="Actor" onClick={this.props.cartActions.changeName}>CHANGE NAME</div>
         <div Classname="link" id="A" style={linkStyle} onClick={() => this.newLink("portfolio")}>PORTFOLIO</div>
         <div Classname="link" id="B" style={linkStyle} onClick={() => this.newLink("shop")}>SHOP</div>
+        <div className="Actor" onClick={this.props.cartActions.changeName}>***</div>
 
 
         <ReactCSSTransitionGroup transitionName="animation" transitionEnterTimeout={800} transitionLeaveTimeout={2100}>

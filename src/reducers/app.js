@@ -2,7 +2,7 @@
 
 export default function app ( 
   state = {
-            link: null    
+            link: "shop"    
           }, action) {
 
   switch (action.type) {

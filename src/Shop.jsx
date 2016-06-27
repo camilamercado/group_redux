@@ -11,18 +11,18 @@ export default class Shop extends Component {
         "text-align": "center",
         "position" : "relative",
         "float": "left",
-        "margin-top": "100px"
+        "margin-top": "2px"
       }
   }
 
   cartStyler() {
       return {
         "font-family" : "andale mono",
-        "width": "50px",
+        "width": "80px",
         "text-align": "center",
         "position" : "relative",
         "float": "left",
-        "margin-top": "100px",
+        "margin-top": "20px",
         "font-size": "10px"
       }
   }
@@ -44,39 +44,41 @@ export default class Shop extends Component {
     let shopDisplay = shopItems.map((item, index)=> {
      // console.log(item.title, index)
 
-      return <div style={cardStyle} 
+      return <div className="ShopItem" style={cardStyle} 
               onClick= {() => this.selectMe(item)}>
-              <p>{item.title}</p>
-              <img src={item.images[0].src} height='150'/>
+              <img src={item.attrs.images[0].src} height='150'/>
+               <p>{item.title}</p>
             </div>
     })
 
     let renderCart = cart2Render.map((item, index)=> {
      // console.log(item.title, index)
 
-      return <div style={cartStyle} 
+      return <div className="CartItem" style={cartStyle} 
               onClick= {() => this.selectMe(item)}>
+              <img src={item.attrs.images[0].src} height='60'/>
               <p>{item.title}</p>
-              <img src={item.attrs.images[0].src} height='50'/>
             </div>
     })
 
-        let renderCart2 = cart2Render.map((item, index)=> {
-     // console.log(item.title, index)
-
-      return <div style={cartStyle}>
-              <p>{item.title}</p>
-              <img src={item.attrs.images[0].src} height='50'/>
-            </div>
-    })
-
+  
 
     return (
-      <div>
-        {shopDisplay}
-        {renderCart}
-                {renderCart2}
+      <div className="Shop_Container">
+        <div className="Cart">
+          <div className="Title">Cart</div>
 
+          <div className="CartItems">
+             {renderCart}
+          </div>
+        </div>
+
+        <div className="Shop">
+        <div className="Title">Shop</div>
+          <div className="ShopItems">
+            {shopDisplay}
+          </div>
+        </div>
       </div>
     )
   }
