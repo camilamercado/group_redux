@@ -28,7 +28,7 @@ function receiveShop(e, dispatch) {
 
 export function selectItem(item) {
 
-    console.log("selecting action >>",item)
+    //console.log("selecting action >>",item)
     return { 'type': 'SELECT_ITEM', 'item': item}
   
 }

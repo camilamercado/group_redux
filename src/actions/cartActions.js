@@ -22,3 +22,4 @@ export function changeName() {
 	console.log("receiving name!")
     return { 'type': 'CHANGE_NAME'}
 }
+

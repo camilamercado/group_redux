@@ -1,63 +1,40 @@
 import React, {Component} from 'react'
-//import PortfolioItem from 'PortfolioItem'
+import Product from 'Product'
 
 export default class Shop extends Component {
   
-
-  cardStyler() {
-      return {
-        "font-family" : "andale mono",
-        "width": "150px",
-        "text-align": "center",
-        "position" : "relative",
-        "float": "left",
-        "margin-top": "2px"
-      }
-  }
-
-  cartStyler() {
-      return {
-        "font-family" : "andale mono",
-        "width": "80px",
-        "text-align": "center",
-        "position" : "relative",
-        "float": "left",
-        "margin-top": "20px",
-        "font-size": "10px"
-      }
+  constructor (props){
+    super(props)
+    this.state = {value:1}
   }
 
   selectMe(item){
-    console.log("selecting >>>", item.id)
     this.props.shopActions.selectItem(item.id)
   }
-
 
   render() {
     // console.log("shop props", this.props)
     let shopItems = this.props.shop.shopItems
     let cart2Render =  this.props.cart2Render
-    let cardStyle = this.cardStyler()
-    let cartStyle = this.cartStyler()
     
 
     let shopDisplay = shopItems.map((item, index)=> {
-     // console.log(item.title, index)
-
-      return <div className="ShopItem" style={cardStyle} 
-              onClick= {() => this.selectMe(item)}>
-              <img src={item.attrs.images[0].src} height='150'/>
-               <p>{item.title}</p>
-            </div>
+  
+      return <Product key={index}
+                      item={item}       
+                      index={index} 
+                      shopActions={this.props.shopActions}/>
     })
 
     let renderCart = cart2Render.map((item, index)=> {
-     // console.log(item.title, index)
+      let BuyVal = item.selectedVariant
 
-      return <div className="CartItem" style={cartStyle} 
+      return <div className="CartItem"
+              key={index}
               onClick= {() => this.selectMe(item)}>
               <img src={item.attrs.images[0].src} height='60'/>
               <p>{item.title}</p>
+              <p>{BuyVal.title} : {BuyVal.price}</p>
             </div>
     })
 
@@ -65,20 +42,20 @@ export default class Shop extends Component {
 
     return (
       <div className="Shop_Container">
+        
         <div className="Cart">
           <div className="Title">Cart</div>
-
-          <div className="CartItems">
-             {renderCart}
-          </div>
+            <div className="CartItems">
+               {renderCart}
+            </div>
         </div>
 
         <div className="Shop">
-        <div className="Title">Shop</div>
-          <div className="ShopItems">
-            {shopDisplay}
+          <div className="Title">Shop</div>
+            <div className="ShopItems">
+              {shopDisplay}
+            </div>
           </div>
-        </div>
       </div>
     )
   }

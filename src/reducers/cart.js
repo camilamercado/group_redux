@@ -14,11 +14,11 @@ export default function cart (
       }
 
       case 'SELECT_ITEM':
-
       return {
         ...state,
         mockCart: state.mockCart.concat(action.item)
       }
+
 
       default:
       return state

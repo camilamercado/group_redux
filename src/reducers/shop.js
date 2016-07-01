@@ -18,7 +18,7 @@ export default function shopify (
       }
 
       case 'RECEIVE_SHOPBYID':
-
+      console.log("selecting shopBYID!", action)
       return {
         ...state, 
         shopByID: action.shop.reduce((retVal, curr) => 
