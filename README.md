@@ -15,7 +15,9 @@ open localhost:8080
 ## Redux Workflow
 
 This App utitlizes the Shopify Javascript Buy SDK in a flux / redux pattern
+
 Interactions with the API are carried out by the Apps Actions and Reducers
+
 Examples ...
 
 AppActions - Initialzie shop, and Receive Products
