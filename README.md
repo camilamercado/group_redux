@@ -3,6 +3,8 @@ Branched out of dan_version
 
 Redux toolkit for implementing Shopify Javascript Buy SDK
 
+![alt tag](https://github.com/camilamercado/group_redux/blob/shopify_redux/src/images/store.png)
+
 ## Setup
 
 Install the npm dependencies and run the webpack dev server:
